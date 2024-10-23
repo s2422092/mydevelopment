@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データ入力</title>
+
+    <style>
+    .main {
+        color: blue;
+        position: relative;
+        left: 50%;
+        background: aliceblue; /* 背景色 */
+        border: 2px solid blue; /* 境界線の太さと色を指定 */
+        border-radius: 5px; /* 角を丸くするオプション */
+        padding: 10px; /* 内側の余白を追加 */
+        transform: translateX(-50%); /* 中央に配置するために修正 */
+        text-align: center; /* 文字を中央に配置 */
+    }
+
+    .input-group_wageup_t_add{
+        position: relative;
+        top:50%;
+        left:50%;
+        width: 50%;
+        background: aliceblue; /* 背景色 */
+        border: 2px solid blue; /* 境界線の太さと色を指定 */
+        border-radius: 5px; /* 角を丸くするオプション */
+        padding: 10px; /* 内側の余白を追加 */
+        transform: translate(-50%,100%);
+        background-color: aqua;
+        text-align: center;
+
+    }
+
+
+    </style>
+
+</head>
+
+<body>
+    <form>
+
+
+
+        <div id="form-container">
+
+            <div class="main">
+                <h1>勤務時間の記入</h1>
+            </div>
+            <div class="input-group_wageup_t_add">
+                <label for="wageup_start_time">始業時間 (開始):</label>
+                <input type="time" id="wageup_start_time" name="wageup_start_time[]" placeholder="開始時間" required>
+                <br>
+
+                <label for="wageup_end_time">就業時間 (終了):</label>
+                <input type="time" id="wageup_end_time" name="wageup_end_time[]" placeholder="終了時間" required>
+
+                <br>
+                <button class="back-button" onclick="location.href='home.php'">戻る</button>
+                <button type="submit">完了</button>
+            </div>
+        </div>
+        
+    </form>
+</body>
+</html>

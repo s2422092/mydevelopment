@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォーム追加</title>
+    <style>
+        .input-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>入力フォーム</h1>
+<div id="form-container">
+    <div class="input-group">
+        <label for="area">場所（任意）:</label>
+        <input type="text" id="area" name="area" placeholder="場所（任意）" required>
+    </div>
+</div>
+
+<button id="add-input">入力フォームを追加</button>
+
+<script>
+    document.getElementById('add-input').addEventListener('click', function() {
+        // 新しい入力グループを作成
+        const inputGroup = document.createElement('div');
+        inputGroup.classList.add('input-group');
+
+        // ラベルを作成
+        const label = document.createElement('label');
+        label.textContent = '場所（任意）:';
+        
+        // 入力フィールドを作成
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = 'area[]'; // 配列として送信するために[]を追加
+        input.placeholder = '場所（任意）';
+        input.required = true;
+
+        // 新しい入力グループにラベルと入力フィールドを追加
+        inputGroup.appendChild(label);
+        inputGroup.appendChild(input);
+
+        // フォームコンテナに追加
+        document.getElementById('form-container').appendChild(inputGroup);
+    });
+</script>
+
+</body>
+</html>

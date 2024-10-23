@@ -1,0 +1,105 @@
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>登録</title>
+</head>
+
+<style>
+body {
+    width: 100%;
+    height: 100vh; /* ビューポートの高さに合わせる */
+    background: linear-gradient(
+        to right,
+        white, /* 全体の背景色 */
+        white 25%, /* 25%までは白色 */
+        rgb(134, 248, 21) 25%, /* 25%から緑色 */
+        rgb(134, 248, 21) 75%, /* 75%まで緑色 */
+        white 75% /* 75%から白色 */
+    );
+}
+
+.login-screen{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.app-title h1{
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Helvetica Neue';
+}
+
+.login-form{
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Helvetica Neue';
+}
+.create_acount{
+position: absolute;
+color: #aaa;
+
+}
+.login-field{
+    width: 100%;
+    padding: 15px;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.login-link{
+font-size: 20px;
+color: rgb(251, 251, 251);
+padding: 5px 10px;
+margin: 0 3px;
+border: solid 1px white;
+border-radius: 10px;
+transition: all .5s;
+}
+
+.submit{
+font-size: 20px;
+color: rgb(255, 255, 255);
+padding: 5px 10px;
+margin: 0 3px;
+border: solid 1px white;
+border-radius: 10px;
+transition: all .5s;
+}
+</style>
+<body>
+    <div class="login-screen">
+        <div class="app-title">
+          <h1>新規登録</h1>
+        </div>
+        <div class="login-form">
+            <div class="control-group">
+            <input type="password" class="login-field" value="" placeholder="ユーザーネーム" id="User_name">
+            <label class="login-field-icon fui-user" for="login-name"></label>
+            </div>
+    
+            <div class="control-group">
+            <input type="password" class="login-field" value="" placeholder="メールアドレス" id="email">
+            <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+
+            <div class="control-group">
+            <input type="password" class="login-field" value="" placeholder="パスワード" id="login-pass">
+            <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+
+            <div class="control-group">
+            <input type="password" class="login-field" value="" placeholder="パスワードの再入力" id="login-pass">
+            <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+            <a class="login-link" href="/Users/yugo_suzuki/mydevelopment/development/sc2024/login.html">return</a>
+            
+            <button type="submit" class="submit" >登録</button>
+</body>
+</html>

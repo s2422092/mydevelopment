@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間帯入力</title>
+    <script>
+        function validateTime() {
+            const startTime = "09:00";
+            const endTime = "17:00";
+            const inputTime = document.getElementById("work_time").value;
+
+            if (inputTime < startTime || inputTime > endTime) {
+                alert(`時間は${startTime}から${endTime}の間で入力してください。`);
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>時間帯入力</h1>
+        <form onsubmit="return validateTime()">
+            <label for="work_time">勤務時間:</label>
+            <input type="time" id="work_time" name="work_time" required>
+            <button type="submit">送信</button>
+        </form>
+    </div>
+</body>
+</html>

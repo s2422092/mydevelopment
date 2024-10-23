@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>入力画面</title>
+    <style>
+        /* ナビゲーション */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        nav ul {
+            display: flex;
+            background: rgba(255,255,255,.7);
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            font-size: 1.2rem;
+        }
+        nav li {
+            text-align: center;
+            padding: 10px 0;
+            width: 80px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+        nav li:hover {
+            background: white;
+        }
+        /* ナビゲーションの下にマージンを追加 */
+        nav + div {
+            margin-top: 60px; /* ナビゲーションの高さに応じて調整 */
+        }
+        .hedder {
+            background-color: rgb(8, 84, 236);
+        }
+        .success {
+            color: green; /* 成功メッセージの色 */
+            margin-bottom: 15px;
+        }
+        .error {
+            color: red; /* エラーメッセージの色 */
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="hedder">
+    <ul>
+        <li><a href="main.php">ホーム</a></li>
+        <li><a href="input.php">入力</a></li>
+        <li><a href="output.php">表示</a></li>
+        <li><a href="logout.php">logout</a></li>
+    </ul>
+</nav>
+
+<div class="form-container">
+
+
+    <form method="post" action="">
+        <label for="job_name">アルバイト名:</label>
+        <input type="text" name="job_name" id="job_name" required>
+        <br>
+        <label for="wage">時給:</label>
+        <input type="number" name="wage" id="wage" required>
+        <br>
+        <label for="time_h">出勤時間:</label>
+        <input type="number" name="time_h" id="time_h" required>
+        <br>
+        <button class="entry" type="submit" name="input">完了</button>
+
+    </form>
+</div>
+
+</body>
+</html>

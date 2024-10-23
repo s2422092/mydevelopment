@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データ入力</title>
+    <style>
+        .input-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>アルバイト情報2</h1>
+
+        <form action="/login" method="post">
+            <h2>基本情報</h2>
+            <label for="job_id">id:</label>
+            <input type="number" id="job_id" name="job_id" placeholder="id" required>
+
+            <label for="wage">基本給料:</label>
+            <input type="number" id="wage" name="wage" placeholder="基本給料" required>
+
+            <label for="wage_data">給料日:</label>
+            <input type="date" id="wage_data" name="wage_data" required>
+
+            <label for="train_cost">交通費:</label>
+            <input type="number" id="train_cost" name="train_cost" placeholder="交通費" required>
+
+            <h2>詳細情報</h2>
+            <label for="lunch_costs">昼食費:</label>
+            <input type="number" id="lunch_costs" name="lunch_costs" placeholder="昼食費">
+
+            <label for="lunch_time">昼食費が発生する勤務時間:</label>
+            <input type="time" id="lunch_time" name="lunch_time">
+
+            <label for="break">休憩時間(h):</label>
+            <input type="number" id="break" name="break" placeholder="休憩時間">
+
+            <label for="break_time">休憩時間が発生する勤務時間:</label>
+            <input type="time" id="break_time" name="break_time">
+
+            <label for="wageup">時給アップ代金:</label>
+            <input type="number" id="wageup" name="wageup" placeholder="時給アップ">
+                
+            <div id="form-container">
+                <div class="input-group wageup_t_add">
+                    <label for="wageup_time">時給アップ時間帯:</label>
+                    <input type="number" id="wageup_time" name="wageup_time[]" placeholder="時給アップ時間帯">
+                </div>
+            </div>
+
+            <button type="button" id="add-input">入力フォームを追加</button>
+            <button type="submit">完了</button>
+
+        </form>
+    </div>
+
+<script>
+    document.getElementById('add-input').addEventListener('click', function(event) {
+        event.preventDefault(); // フォームの送信を防ぐ
+
+        const inputGroup = document.createElement('div');
+        inputGroup.classList.add('input-group', 'wageup_t_add');
+
+        const label = document.createElement('label');
+        label.textContent = '時給アップ時間帯:';
+
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.name = 'wageup_time[]';
+        input.placeholder = '時給アップ時間帯';
+        input.required = true;
+
+        inputGroup.appendChild(label);
+        inputGroup.appendChild(input);
+        
+        document.getElementById('form-container').appendChild(inputGroup);
+    });
+</script>
+
+</body>
+</html>

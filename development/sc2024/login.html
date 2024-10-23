@@ -1,0 +1,100 @@
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>ログイン</title>  
+
+</head>
+<style>
+
+.login {
+  background: linear-gradient(to right, rgb(134, 248, 21) 50%, transparent 50%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.login-screen {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.app-title h1{
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+}
+
+.login-field{
+  width: 100%;
+  padding: 15px;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.login-link{
+  position: absolute;
+  color: #aaa;
+}
+.login_button{
+position: absolute;
+color: #aaa;
+left:+100px
+}
+
+.login-link{
+font-size: 20px;
+color: rgb(251, 251, 251);
+padding: 5px 10px;
+margin: 0 3px;
+border: solid 1px white;
+border-radius: 10px;
+transition: all .5s;
+}
+
+.login_button{
+font-size: 20px;
+color: rgb(255, 255, 255);
+padding: 5px 10px;
+margin: 0 3px;
+border: solid 1px white;
+border-radius: 10px;
+transition: all .5s;
+}
+
+</style>
+<body>
+  <from action="login.php" method="post">
+    <div class="login">
+      <div class="login-screen">
+        <div class="app-title">
+          <h1>Tourism plan</h1>
+          <h2>ログイン</h2>
+        </div>
+  
+        <div class="login-form">
+          <div class="control-group">
+          <input type="text" class="login-field" value="" placeholder="ユーザーネーム" id="login-name">
+          <label class="login-field-icon fui-user" for="login-name"></label>
+          </div>
+          <br>
+          <div class="control-group">
+          <input type="password" class="login-field" value="" placeholder="パスワードの入力" id="login-pass">
+          <label class="login-field-icon fui-lock" for="login-pass"></label>
+          </div>
+          <br>
+          <a class="login-link" href="/Users/yugo_suzuki/mydevelopment/development/sc2024/register.html">新規作成</a>
+          <button class=login_button type="submit">ログイン</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

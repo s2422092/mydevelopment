@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+<style>
+    body {
+        background: linear-gradient(to right, #d1eaff, #91c5f9);
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        background-color: rgb(8, 84, 236);
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    nav li:hover {
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .hedder {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .job_money {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .job_money h1 {
+        margin-bottom: 10px;
+    }
+
+    .job_money h3 {
+        font-size: 2rem;
+        color: rgb(8, 84, 236);
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+</style>
+</style>
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+
+
+
+    <nav class="hedder">
+        <ul>
+            <li><a href="main.html"></a>ホーム</li>
+            <li><a href="output.html"></a>表示</li>
+            <li><a href="logout.html"></a>logout</li>
+
+        </ul>
+    </nav>
+
+    <div class="job_money">
+        <h1>今月の総給料</h1>
+        <h3 id="money">1000</h3>
+        <label for="money">円</label>
+    </div>
+
+    <div class="job_tiem">
+
+    </div>
+</body>
+</html>

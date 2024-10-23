@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* 背景色 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 縦中央寄せ */
+            margin: 0;
+        }
+
+        .date-input-container {
+            background: white; /* 入力フィールドの背景色 */
+            border-radius: 8px; /* 角を丸く */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加 */
+            padding: 20px; /* パディング */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="date"] {
+            border: 2px solid #007bff; /* ボーダーの色 */
+            border-radius: 4px; /* 角を丸く */
+            padding: 10px; /* パディング */
+            width: 200px; /* 幅 */
+            font-size: 16px; /* フォントサイズ */
+            transition: border-color 0.3s; /* ボーダー色のトランジション */
+
+        }
+
+        input[type="date"]:focus {
+            border-color: #0056b3; /* フォーカス時のボーダー色 */
+            outline: none; /* デフォルトのアウトラインを削除 */
+        }
+
+        label {
+            margin-bottom: 10px; /* ラベルと入力フィールドの間隔 */
+            font-size: 18px; /* ラベルのフォントサイズ */
+        }
+    </style>
+</head>
+<body>
+    <div class="date-input-container">
+        <label for="date">日付を選択:</label>
+        <input type="date" id="date">
+    </div>
+</body>
+</html>
